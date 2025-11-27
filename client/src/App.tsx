@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -10,6 +11,13 @@ import Distributor from "./pages/Distributor";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 
 function Router() {
+  const [location] = useLocation();
+
+  // 每次路由變化時滾動到頂部
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location]);
+
   return (
     <Switch>
       <Route path={"/"} component={Home} />

@@ -79,7 +79,7 @@ export default function Distributor() {
                       </li>
                       <li className="flex items-start gap-3">
                         <Check className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                        <span>無年齡、職業、地域限制</span>
+                        <span>年滿20歲，無職業、地域限制</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <Check className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
@@ -131,7 +131,7 @@ export default function Distributor() {
             <div>
               <h2 className="text-4xl font-bold mb-6">PV 點數與現金回饋</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                所有透過您的專屬工具完成的購物，無論是自購或分享給他人購買，您都能獲得 PV 點數。點數每月結算轉換成現金，次月 20 日匯入您的銀行帳戶。
+                所有透過您的專屬網址或專屬推薦碼完成的購物，無論是自購或分享給他人購買，您都能獲得 PV 點數。點數每月結算轉換成現金，次月 20 日匯入您的銀行帳戶。
               </p>
 
               <div className="space-y-6">
@@ -212,7 +212,7 @@ export default function Distributor() {
             <div>
               <h3 className="text-3xl font-bold mb-6">直屬推薦獎勵</h3>
               <p className="text-lg text-muted-foreground mb-8">
-                當您推薦他人成為經銷商時，被推薦人會成為您的「直屬推薦」。只要他們進行銷售，您就能獲得一定百分比的現金回饋。
+                當您推薦他人成為經銷商時，被推薦人會成為您的「直屬推薦」。只要他們進行銷售，您就能獲得一定百分比的PV點數。
               </p>
 
               <div className="space-y-4">
@@ -235,6 +235,7 @@ export default function Distributor() {
                     <p className="text-sm text-muted-foreground">您的推薦人再推薦的人銷售時，您獲得 5% 回饋</p>
                   </CardContent>
                 </Card>
+                <p className="text-sm text-muted-foreground text-center">※以上回饋百分比僅供參考詳情請見合約書※</p>
               </div>
             </div>
           </div>
@@ -253,7 +254,7 @@ export default function Distributor() {
                       <tr className="border-b-2">
                         <th className="text-left py-3 px-4">來源</th>
                         <th className="text-left py-3 px-4">關係</th>
-                        <th className="text-right py-3 px-4">銷售額</th>
+                        <th className="text-right py-3 px-4">獲得PV值</th>
                         <th className="text-right py-3 px-4">獎勵比例</th>
                         <th className="text-right py-3 px-4">您獲得</th>
                       </tr>
@@ -262,27 +263,27 @@ export default function Distributor() {
                       <tr className="border-b">
                         <td className="py-3 px-4">B 的銷售</td>
                         <td className="py-3 px-4"><span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm">直屬</span></td>
-                        <td className="text-right py-3 px-4">2,000 元</td>
+                        <td className="text-right py-3 px-4">2,000 點</td>
                         <td className="text-right py-3 px-4">10%</td>
-                        <td className="text-right py-3 px-4 font-bold text-primary">200 元</td>
+                        <td className="text-right py-3 px-4 font-bold text-primary">200 點</td>
                       </tr>
                       <tr className="border-b">
                         <td className="py-3 px-4">C 的銷售</td>
                         <td className="py-3 px-4"><span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm">間接</span></td>
-                        <td className="text-right py-3 px-4">1,500 元</td>
+                        <td className="text-right py-3 px-4">1,500 點</td>
                         <td className="text-right py-3 px-4">5%</td>
-                        <td className="text-right py-3 px-4 font-bold text-primary">75 元</td>
+                        <td className="text-right py-3 px-4 font-bold text-primary">75 點</td>
                       </tr>
                       <tr className="border-b">
                         <td className="py-3 px-4">D 的銷售</td>
                         <td className="py-3 px-4"><span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm">間接</span></td>
-                        <td className="text-right py-3 px-4">1,000 元</td>
+                        <td className="text-right py-3 px-4">1,000 點</td>
                         <td className="text-right py-3 px-4">5%</td>
-                        <td className="text-right py-3 px-4 font-bold text-primary">50 元</td>
+                        <td className="text-right py-3 px-4 font-bold text-primary">50 點</td>
                       </tr>
                       <tr className="bg-primary/5 font-bold">
                         <td colSpan={4} className="py-3 px-4 text-right">總計</td>
-                        <td className="text-right py-3 px-4 text-xl text-primary">325 元</td>
+                        <td className="text-right py-3 px-4 text-xl text-primary">325 點</td>
                       </tr>
                     </tbody>
                   </table>
