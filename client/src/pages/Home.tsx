@@ -38,13 +38,13 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animate-delay-400">
               <Link href="/supplier">
-                <Button size="lg" className="text-lg px-8 w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto border-2 border-transparent hover:border-primary transition-all">
                   <Store className="mr-2 h-5 w-5" />
                   我是供應商
                 </Button>
               </Link>
               <Link href="/distributor">
-                <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto border-2 border-transparent hover:border-primary transition-all">
                   <Users className="mr-2 h-5 w-5" />
                   我是經銷商
                 </Button>
@@ -64,101 +64,97 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Supplier Card */}
-            <Card className="border-2 hover:border-primary transition-all hover:shadow-2xl group hover-lift animate-scale-in">
-              <CardContent className="p-0">
-                <div className="relative h-64 overflow-hidden rounded-t-lg">
-                  <img 
-                    src="/supplier-hero.jpg" 
-                    alt="供應商" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+            <Card className="border-2 hover:border-primary transition-all hover:shadow-2xl group hover-lift animate-scale-in overflow-hidden p-0">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src="/supplier-hero.jpg" 
+                  alt="供應商" 
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-6 left-6">
                     <h3 className="text-3xl font-bold text-white mb-2">供應商專區</h3>
                     <p className="text-white/90">品牌成長的加速器</p>
                   </div>
-                </div>
-                <div className="p-8">
-                  <div className="space-y-4 mb-8">
-                    <div className="flex items-start gap-3">
-                      <Shield className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <h4 className="font-bold mb-1">零成本上架</h4>
-                        <p className="text-sm text-muted-foreground">成交後才收取 15% 手續費</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Globe className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <h4 className="font-bold mb-1">專屬品牌頁面</h4>
-                        <p className="text-sm text-muted-foreground">打造您的線上品牌形象館</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <TrendingUp className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <h4 className="font-bold mb-1">消費者分潤</h4>
-                        <p className="text-sm text-muted-foreground">激勵消費者主動分享推廣</p>
-                      </div>
+              </div>
+              <div className="p-8">
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <Shield className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold mb-1">零成本上架</h4>
+                      <p className="text-sm text-muted-foreground">成交後才收取 15% 手續費</p>
                     </div>
                   </div>
-                  <Link href="/supplier">
-                    <Button className="w-full" size="lg">
-                      了解供應商方案
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                  </Link>
+                  <div className="flex items-start gap-3">
+                    <Globe className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold mb-1">專屬品牌頁面</h4>
+                      <p className="text-sm text-muted-foreground">打造您的線上品牌形象館</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <TrendingUp className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold mb-1">消費者分潤</h4>
+                      <p className="text-sm text-muted-foreground">激勵消費者主動分享推廣</p>
+                    </div>
+                  </div>
                 </div>
-              </CardContent>
+                <Link href="/supplier">
+                  <Button className="w-full hover:bg-primary hover:text-primary-foreground transition-all" size="lg" variant="secondary">
+                    了解供應商方案
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
             </Card>
 
             {/* Distributor Card */}
-            <Card className="border-2 hover:border-secondary transition-all hover:shadow-2xl group hover-lift animate-scale-in animate-delay-200">
-              <CardContent className="p-0">
-                <div className="relative h-64 overflow-hidden rounded-t-lg">
-                  <img 
-                    src="/distributor-hero.jpg" 
-                    alt="經銷商" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+            <Card className="border-2 hover:border-primary transition-all hover:shadow-2xl group hover-lift animate-scale-in animate-delay-200 overflow-hidden p-0">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src="/distributor-hero.jpg" 
+                  alt="經銷商" 
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-6 left-6">
                     <h3 className="text-3xl font-bold text-white mb-2">經銷商專區</h3>
                     <p className="text-white/90">輕鬆賺取被動收入</p>
                   </div>
-                </div>
-                <div className="p-8">
-                  <div className="space-y-4 mb-8">
-                    <div className="flex items-start gap-3">
-                      <Zap className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <h4 className="font-bold mb-1">零門檻加入</h4>
-                        <p className="text-sm text-muted-foreground">任何消費者都可申請</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Users className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <h4 className="font-bold mb-1">團隊獎勵機制</h4>
-                        <p className="text-sm text-muted-foreground">建立推薦網絡，獲得被動收入</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <TrendingUp className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <div>
-                        <h4 className="font-bold mb-1">升級機制</h4>
-                        <p className="text-sm text-muted-foreground">達成條件，解鎖更高回饋</p>
-                      </div>
+              </div>
+              <div className="p-8">
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <Zap className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold mb-1">零門檻加入</h4>
+                      <p className="text-sm text-muted-foreground">任何消費者都可申請</p>
                     </div>
                   </div>
-                  <Link href="/distributor">
-                    <Button className="w-full" size="lg" variant="secondary">
-                      了解經銷商方案
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                  </Link>
+                  <div className="flex items-start gap-3">
+                    <Users className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold mb-1">團隊獎勵機制</h4>
+                      <p className="text-sm text-muted-foreground">建立推薦網絡，獲得被動收入</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <TrendingUp className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold mb-1">升級機制</h4>
+                      <p className="text-sm text-muted-foreground">達成條件，解鎖更高回饋</p>
+                    </div>
+                  </div>
                 </div>
-              </CardContent>
+                <Link href="/distributor">
+                  <Button className="w-full hover:bg-primary hover:text-primary-foreground transition-all" size="lg" variant="secondary">
+                    了解經銷商方案
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
             </Card>
           </div>
         </div>
@@ -240,12 +236,12 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/supplier">
-                <Button size="lg" className="text-lg px-8 w-full sm:w-auto">
+                <Button size="lg" className="text-lg px-8 w-full sm:w-auto border-2 border-transparent hover:border-primary/80 transition-all">
                   成為供應商
                 </Button>
               </Link>
               <Link href="/distributor">
-                <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto border-2 border-transparent hover:border-primary transition-all">
                   成為經銷商
                 </Button>
               </Link>
