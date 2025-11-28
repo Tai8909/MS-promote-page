@@ -444,7 +444,7 @@ export default function Apply() {
                     </li>
                     <li className="flex gap-3">
                       <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">2</span>
-                      <span>等待 1~2 個工作天審核通過</span>
+                      <span>等待 1~3 個工作天審核通過</span>
                     </li>
                     <li className="flex gap-3">
                       <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">3</span>
