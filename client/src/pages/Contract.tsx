@@ -32,27 +32,51 @@ export default function Contract() {
       </header>
 
       {/* 合約圖片顯示區域 */}
-      <main className="flex-1 container py-12">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-2xl p-8 space-y-6 animate-fade-in animate-delay-200">
-            {contractPages.map((imagePath, index) => (
-              <div 
-                key={index}
-                className="relative group"
-              >
-                <img
-                  src={imagePath}
-                  alt={`合約第 ${index + 1} 頁`}
-                  className="w-full h-auto rounded-lg shadow-md transition-transform hover:scale-[1.02]"
-                  loading={index > 2 ? "lazy" : "eager"}
-                />
-                {/* 頁碼標示 */}
-                <div className="absolute top-4 right-4 bg-primary/90 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                  {index + 1} / {contractPages.length}
+      <main className="flex-1 py-12">
+        {/* 桌面版：使用 container 和 max-width */}
+        <div className="hidden md:block container">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-2xl p-8 space-y-6 animate-fade-in animate-delay-200">
+              {contractPages.map((imagePath, index) => (
+                <div 
+                  key={index}
+                  className="relative group"
+                >
+                  <img
+                    src={imagePath}
+                    alt={`合約第 ${index + 1} 頁`}
+                    className="w-full h-auto rounded-lg shadow-md transition-transform hover:scale-[1.02]"
+                    loading={index > 2 ? "lazy" : "eager"}
+                  />
+                  {/* 頁碼標示 */}
+                  <div className="absolute top-4 right-4 bg-primary/90 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                    {index + 1} / {contractPages.length}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+        </div>
+
+        {/* 手機版：全寬度顯示 */}
+        <div className="md:hidden space-y-4 animate-fade-in animate-delay-200">
+          {contractPages.map((imagePath, index) => (
+            <div 
+              key={index}
+              className="relative"
+            >
+              <img
+                src={imagePath}
+                alt={`合約第 ${index + 1} 頁`}
+                className="w-full h-auto"
+                loading={index > 2 ? "lazy" : "eager"}
+              />
+              {/* 頁碼標示 */}
+              <div className="absolute top-2 right-2 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg">
+                {index + 1} / {contractPages.length}
+              </div>
+            </div>
+          ))}
         </div>
       </main>
 

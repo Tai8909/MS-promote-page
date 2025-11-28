@@ -219,7 +219,7 @@ export default function Distributor() {
               </p>
 
               <div className="space-y-4">
-                <Card className="border-2 border-primary/50">
+                <Card className="border-2 border-secondary/50">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg font-bold">第一層：直屬推薦</span>
@@ -251,7 +251,8 @@ export default function Distributor() {
                   假設您推薦了 B，B 推薦了 C 和 D，以下是您的收入計算
                 </p>
 
-                <div className="overflow-x-auto">
+                {/* 桌面版表格 */}
+                <div className="hidden lg:block overflow-x-auto">
                   <table className="w-full">
                     <thead>
                       <tr className="border-b-2">
@@ -290,6 +291,55 @@ export default function Distributor() {
                       </tr>
                     </tbody>
                   </table>
+                </div>
+
+                {/* 手機版卡片式設計 */}
+                <div className="lg:hidden space-y-4">
+                  <div className="bg-accent/30 p-4 rounded-lg border-l-4 border-primary">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <div className="font-semibold">B 的分潤點數</div>
+                        <span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm">直屬</span>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-sm text-muted-foreground">2,000 點 × 50%</div>
+                        <div className="font-bold text-lg text-primary">1,000 點</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-accent/30 p-4 rounded-lg border-l-4 border-primary">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <div className="font-semibold">C 的分潤點數</div>
+                        <span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm">間接</span>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-sm text-muted-foreground">1,500 點 × 10%</div>
+                        <div className="font-bold text-lg text-primary">150 點</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-accent/30 p-4 rounded-lg border-l-4 border-primary">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <div className="font-semibold">D 的分潤點數</div>
+                        <span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm">間接</span>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-sm text-muted-foreground">1,000 點 × 10%</div>
+                        <div className="font-bold text-lg text-primary">100 點</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-primary/10 p-4 rounded-lg border-2 border-primary">
+                    <div className="flex justify-between items-center">
+                      <div className="font-bold text-lg">您的總收入</div>
+                      <div className="font-bold text-2xl text-primary">1,250 點</div>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
