@@ -20,7 +20,6 @@ export default function Supplier() {
               <Link href="/distributor">
                 <a className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">經銷商專區</a>
               </Link>
-              <Button size="sm">立即加入</Button>
             </div>
           </div>
         </div>

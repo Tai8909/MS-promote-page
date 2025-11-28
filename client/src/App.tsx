@@ -8,6 +8,8 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Supplier from "./pages/Supplier";
 import Distributor from "./pages/Distributor";
+import Contract from "./pages/Contract";
+import Apply from "./pages/Apply";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 
 function Router() {
@@ -23,6 +25,8 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/supplier"} component={Supplier} />
       <Route path={"/distributor"} component={Distributor} />
+      <Route path={"/contract"} component={Contract} />
+      <Route path={"/apply"} component={Apply} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

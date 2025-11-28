@@ -20,7 +20,6 @@ export default function Distributor() {
               <Link href="/distributor">
                 <a className="text-sm font-medium text-primary">經銷商專區</a>
               </Link>
-              <Button size="sm">立即加入</Button>
             </div>
           </div>
         </div>
@@ -38,12 +37,16 @@ export default function Distributor() {
                 無論您是想兼職增加收入、組建團購社群，或是單純想省錢的消費者，我們的經銷商計畫都為您敞開大門
               </p>
               <div className="flex gap-4 animate-fade-in animate-delay-400">
-                <Button size="lg" className="text-lg px-8">
-                  <Users className="mr-2 h-5 w-5" />
-                  成為經銷商
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8">
-                  了解更多
+                <Link href="/apply">
+                  <Button size="lg" className="text-lg px-8">
+                    <Users className="mr-2 h-5 w-5" />
+                    成為經銷商
+                  </Button>
+                </Link>
+                <Button size="lg" variant="outline" className="text-lg px-8" asChild>
+                  <a href="https://lin.ee/MGIhWu2g" target="_blank" rel="noopener noreferrer">
+                    了解更多
+                  </a>
                 </Button>
               </div>
             </div>
@@ -478,12 +481,16 @@ export default function Distributor() {
               無須投資、無須庫存、無須物流。只需分享，就能賺取被動收入。立即加入，開啟您的經銷商生涯！
             </p>
             <div className="flex gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                立即申請成為經銷商
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8">
-                查看詳細說明書
-              </Button>
+              <Link href="/apply">
+                <Button size="lg" className="text-lg px-8">
+                  立即申請成為經銷商
+                </Button>
+              </Link>
+              <Link href="/contract">
+                <Button size="lg" variant="outline" className="text-lg px-8">
+                  查看詳細說明書
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
