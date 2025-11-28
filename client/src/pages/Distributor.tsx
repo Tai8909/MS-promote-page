@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Link2, QrCode, DollarSign, Users, TrendingUp, Award, Smartphone } from "lucide-react";
+import { Check, Link2, QrCode, DollarSign, Users, TrendingUp, Award, Smartphone, Crown, Share, Share2Icon, Group, GroupIcon } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Distributor() {
@@ -220,9 +220,9 @@ export default function Distributor() {
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg font-bold">第一層：直屬推薦</span>
-                      <span className="text-2xl font-bold text-primary">10%</span>
+                      <span className="text-2xl font-bold text-primary">50%</span>
                     </div>
-                    <p className="text-sm text-muted-foreground">您直接推薦的人銷售時，您獲得 10% 回饋</p>
+                    <p className="text-sm text-muted-foreground">您直接推薦的人銷售時，您獲得 50% 回饋</p>
                   </CardContent>
                 </Card>
 
@@ -230,9 +230,9 @@ export default function Distributor() {
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg font-bold">第二層：間接推薦</span>
-                      <span className="text-2xl font-bold text-primary">5%</span>
+                      <span className="text-2xl font-bold text-primary">10%</span>
                     </div>
-                    <p className="text-sm text-muted-foreground">您的推薦人再推薦的人銷售時，您獲得 5% 回饋</p>
+                    <p className="text-sm text-muted-foreground">您的推薦人再推薦的人銷售時，您獲得 10% 回饋</p>
                   </CardContent>
                 </Card>
                 <p className="text-sm text-muted-foreground text-center">※以上回饋百分比僅供參考詳情請見合約書※</p>
@@ -261,35 +261,36 @@ export default function Distributor() {
                     </thead>
                     <tbody>
                       <tr className="border-b">
-                        <td className="py-3 px-4">B 的銷售</td>
+                        <td className="py-3 px-4">B 的分潤點數</td>
                         <td className="py-3 px-4"><span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm">直屬</span></td>
                         <td className="text-right py-3 px-4">2,000 點</td>
-                        <td className="text-right py-3 px-4">10%</td>
-                        <td className="text-right py-3 px-4 font-bold text-primary">200 點</td>
+                        <td className="text-right py-3 px-4">50%</td>
+                        <td className="text-right py-3 px-4 font-bold text-primary">1000 點</td>
                       </tr>
                       <tr className="border-b">
-                        <td className="py-3 px-4">C 的銷售</td>
+                        <td className="py-3 px-4">C 的分潤點數</td>
                         <td className="py-3 px-4"><span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm">間接</span></td>
                         <td className="text-right py-3 px-4">1,500 點</td>
-                        <td className="text-right py-3 px-4">5%</td>
-                        <td className="text-right py-3 px-4 font-bold text-primary">75 點</td>
+                        <td className="text-right py-3 px-4">10%</td>
+                        <td className="text-right py-3 px-4 font-bold text-primary">150 點</td>
                       </tr>
                       <tr className="border-b">
-                        <td className="py-3 px-4">D 的銷售</td>
+                        <td className="py-3 px-4">D 的分潤點數</td>
                         <td className="py-3 px-4"><span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm">間接</span></td>
                         <td className="text-right py-3 px-4">1,000 點</td>
-                        <td className="text-right py-3 px-4">5%</td>
-                        <td className="text-right py-3 px-4 font-bold text-primary">50 點</td>
+                        <td className="text-right py-3 px-4">10%</td>
+                        <td className="text-right py-3 px-4 font-bold text-primary">100 點</td>
                       </tr>
                       <tr className="bg-primary/5 font-bold">
                         <td colSpan={4} className="py-3 px-4 text-right">總計</td>
-                        <td className="text-right py-3 px-4 text-xl text-primary">325 點</td>
+                        <td className="text-right py-3 px-4 text-xl text-primary">1,250 點</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </CardContent>
             </Card>
+            <p className="text-sm text-muted-foreground text-center">※以上回饋百分比僅供參考詳情請見合約書※</p>
           </div>
         </div>
       </section>
@@ -302,77 +303,67 @@ export default function Distributor() {
             <p className="text-xl text-muted-foreground">達成條件，解鎖更高回饋</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <Card className="border-2 hover:border-primary transition-colors hover-lift">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-muted mx-auto mb-6 flex items-center justify-center">
-                  <Award className="h-8 w-8 text-muted-foreground" />
+                <div className="w-16 h-16 rounded-full mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#B87333' + '20' }}>
+                  <Award className="h-8 w-8" style={{ color: '#B87333' }} />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">初級經銷商</h3>
+                <h3 className="text-2xl font-bold mb-4">經銷商</h3>
                 <div className="space-y-3 text-left">
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">直屬推薦獎勵</span>
+                    <span className="font-bold">50%</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-muted-foreground">間接推薦獎勵</span>
                     <span className="font-bold">10%</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">間接推薦獎勵</span>
-                    <span className="font-bold">5%</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">PV 轉換比例</span>
-                    <span className="font-bold">1:1</span>
-                  </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-primary hover:shadow-xl transition-all transform hover:-translate-y-1">
+            <Card className="border-2 hover:border-primary transition-colors hover-lift">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-6 flex items-center justify-center">
-                  <Award className="h-8 w-8 text-primary" />
+                <div className="w-16 h-16 rounded-full bg-gray-200 mx-auto mb-6 flex items-center justify-center">
+                  <Award className="h-8 w-8 text-gray-400" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">中級經銷商</h3>
+                <h3 className="text-2xl font-bold mb-4">區經銷商</h3>
                 <div className="space-y-3 text-left">
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">直屬推薦獎勵</span>
-                    <span className="font-bold text-primary">12%</span>
+                    <span className="font-bold text-primary">55%</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">間接推薦獎勵</span>
-                    <span className="font-bold text-primary">6%</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">PV 轉換比例</span>
-                    <span className="font-bold text-primary">1:1.1</span>
-                  </div>
-                  <div className="pt-3 border-t">
-                    <span className="text-xs text-primary font-medium">+ 額外月度獎勵</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-secondary hover:shadow-xl transition-all transform hover:-translate-y-1">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-6 flex items-center justify-center">
-                  <Award className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">高級經銷商</h3>
-                <div className="space-y-3 text-left">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">直屬推薦獎勵</span>
                     <span className="font-bold text-primary">15%</span>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-primary transition-colors hover-lift">
+              <CardContent className="p-8 text-center flex flex-col items-center justify-center h-full">
+                <div className="text-6xl font-bold text-muted-foreground/30 mb-4">...</div>
+                <p className="text-sm text-muted-foreground">更多等級</p>
+                <p className="text-xs text-muted-foreground mt-2">持續升級解鎖</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 hover:border-primary transition-colors hover-lift">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 rounded-full bg-yellow-100 mx-auto mb-6 flex items-center justify-center">
+                  <Award className="h-8 w-8 text-yellow-600" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">總代理</h3>
+                <div className="space-y-3 text-left">
+                  <div className="flex justify-between">
+                    <span className="text-sm text-muted-foreground">直屬推薦獎勵</span>
+                    <span className="font-bold text-primary">70%</span>
+                  </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">間接推薦獎勵</span>
-                    <span className="font-bold text-primary">8%</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">PV 轉換比例</span>
-                    <span className="font-bold text-primary">1:1.2</span>
-                  </div>
-                  <div className="pt-3 border-t">
-                    <span className="text-xs text-primary font-medium">+ 額外獎勵 + 獎金</span>
+                    <span className="font-bold text-primary">30%</span>
                   </div>
                 </div>
               </CardContent>
@@ -385,7 +376,7 @@ export default function Distributor() {
       <section className="py-20 bg-accent/30">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">如何建立推薦團隊？</h2>
+            <h2 className="text-4xl font-bold mb-4">您還可以</h2>
             <p className="text-xl text-muted-foreground">三種方式，輕鬆組建您的收入網絡</p>
           </div>
 
