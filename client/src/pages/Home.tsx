@@ -203,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      {/* <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
@@ -224,7 +224,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20">
@@ -236,7 +236,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/supplier">
-                <Button size="lg" className="text-lg px-8 w-full sm:w-auto border-2 border-transparent hover:border-primary/80 transition-all">
+                <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto border-2 border-transparent hover:border-primary transition-all">
                   成為供應商
                 </Button>
               </Link>
