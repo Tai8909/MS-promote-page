@@ -405,11 +405,11 @@ export default function Apply() {
       </nav>
 
       {/* Form Section */}
-      <section className="py-12">
-        <div className="container max-w-6xl">
-          <Card className="shadow-xl">
-            <CardContent className="p-8">
-              <div className="mb-8 p-6 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl">
+      <section className="py-12 bg-white md:bg-transparent">
+        <div className="container max-w-4xl">
+          <Card className="border-0 shadow-none md:border md:shadow-xl">
+            <CardContent className="p-0 md:p-8">
+              <div className="mb-8 p-2 md:p-6 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl">
                 <h1 className="text-3xl font-bold mb-3 gradient-text text-center">
                   My Store 經銷商申請表單
                 </h1>
