@@ -170,10 +170,11 @@ export default function Apply() {
     }
 
     if (name === 'addr') {
-      newValue = value.replace(/\s/g, '');
-      if (newValue.length > 0 && newValue.length < 8) {
+      // 保持原始輸入值，不要即時移除空格以避免干擾輸入法
+      const trimmedValue = value.replace(/\s/g, '');
+      if (trimmedValue.length > 0 && trimmedValue.length < 8) {
         newErrors.addr = '地址長度至少需要8個字';
-      } else if (newValue.length >= 8 && !validateAddress(newValue)) {
+      } else if (trimmedValue.length >= 8 && !validateAddress(trimmedValue)) {
         newErrors.addr = '請輸入完整台灣地址格式，例如：台北市大安區忠孝東路123號';
       } else {
         newErrors.addr = '';
