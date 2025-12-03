@@ -39,7 +39,7 @@ export default function Supplier() {
               <div className="flex gap-4 animate-fade-in animate-delay-400">
                 <Button size="lg" className="text-lg px-8">
                   <TrendingUp className="mr-2 h-5 w-5" />
-                  開始銷售
+                  我要成為供應商
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8">
                   了解更多
@@ -164,7 +164,7 @@ export default function Supplier() {
                 鼓勵消費者主動分享和推薦您的產品，形成口碑行銷。您可以自行決定分潤比例，靈活調整行銷策略。
               </p>
 
-              <div className="bg-accent/50 rounded-xl p-6 mb-8">
+              {/* <div className="bg-accent/50 rounded-xl p-6 mb-8">
                 <h3 className="text-xl font-bold mb-4">分潤計算範例</h3>
                 <p className="text-sm text-muted-foreground mb-4">商品售價：100 元 | 供應商決定分潤：40%</p>
                 
@@ -182,7 +182,7 @@ export default function Supplier() {
                     <span className="text-2xl font-bold text-primary">60 元</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="space-y-4">
                 <div className="flex gap-3">

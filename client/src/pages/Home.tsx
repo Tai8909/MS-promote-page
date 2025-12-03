@@ -40,13 +40,13 @@ export default function Home() {
               <Link href="/supplier">
                 <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto border-2 border-transparent hover:border-primary transition-all">
                   <Store className="mr-2 h-5 w-5" />
-                  我是供應商
+                  我要成為供應商
                 </Button>
               </Link>
               <Link href="/distributor">
                 <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto border-2 border-transparent hover:border-primary transition-all">
                   <Users className="mr-2 h-5 w-5" />
-                  我是經銷商
+                  我要成為經銷商
                 </Button>
               </Link>
             </div>
@@ -237,12 +237,12 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/supplier">
                 <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto border-2 border-transparent hover:border-primary transition-all">
-                  成為供應商
+                  我要成為供應商
                 </Button>
               </Link>
               <Link href="/distributor">
                 <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto border-2 border-transparent hover:border-primary transition-all">
-                  成為經銷商
+                  我要成為經銷商
                 </Button>
               </Link>
             </div>
